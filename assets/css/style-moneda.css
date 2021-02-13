@@ -1,0 +1,26 @@
+.margin-btn {
+  margin: 0.2rem;
+}
+
+h1 {
+  margin: 2rem;
+  color: #007bff;
+}
+
+h2 {
+  margin: 2rem;
+  color: teal;
+}
+
+
+h3 {
+  margin: 2rem;
+  color: purple;
+}
+
+.graf {
+  position: relative;
+  width: 150px;
+  left: 100px;
+  margin-left: -75px;
+}
