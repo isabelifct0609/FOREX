@@ -1,17 +1,17 @@
 // IMPORTACIONES
 
-import { mes1 } from './assets/datos/AUDJPY-5-2018-MES-01.js.js.js.js';
-import { mes2 } from './assets/datos/AUDJPY-5-2018-MES-02.js.js.js.js';
-import { mes3 } from './assets/datos/AUDJPY-5-2018-MES-03.js.js.js.js';
-import { mes4 } from './assets/datos/AUDJPY-5-2018-MES-04.js.js.js.js';
-import { mes5 } from './assets/datos/AUDJPY-5-2018-MES-05.js.js.js.js';
-import { mes6 } from './assets/datos/AUDJPY-5-2018-MES-06.js.js.js.js';
-import { mes7 } from './assets/datos/AUDJPY-5-2018-MES-07.js.js.js.js';
-import { mes8 } from './assets/datos/AUDJPY-5-2018-MES-08.js.js.js.js';
-import { mes9 } from './assets/datos/AUDJPY-5-2018-MES-09.js.js.js.js';
-import { mes10 } from './assets/datos/AUDJPY-5-2018-MES-10.js.js.js.js';
-import { mes11 } from './assets/datos/AUDJPY-5-2018-MES-11.js.js.js.js';
-import { mes12 } from './assets/datos/AUDJPY-5-2018-MES-12.js.js.js.js';
+import { mes1 } from './assets/datos/EURUSD-3-2018-MES-01.js';
+import { mes2 } from './assets/datos/EURUSD-3-2018-MES-02.js';
+import { mes3 } from './assets/datos/EURUSD-3-2018-MES-03.js';
+import { mes4 } from './assets/datos/EURUSD-3-2018-MES-04.js';
+import { mes5 } from './assets/datos/EURUSD-3-2018-MES-05.js';
+import { mes6 } from './assets/datos/EURUSD-3-2018-MES-06.js';
+import { mes7 } from './assets/datos/EURUSD-3-2018-MES-07.js';
+import { mes8 } from './assets/datos/EURUSD-3-2018-MES-08.js';
+import { mes9 } from './assets/datos/EURUSD-3-2018-MES-09.js';
+import { mes10 } from './assets/datos/EURUSD-3-2018-MES-10.js';
+import { mes11 } from './assets/datos/EURUSD-3-2018-MES-11.js';
+import { mes12 } from './assets/datos/EURUSD-3-2018-MES-12.js';
 import { valoresAnuales } from '../../js/valoresMes.js';
 import { valoresDiariosAnual } from '../../js/valoresDia.js';
 import { mostrarGrafica } from '../../js/grafica.js'
