@@ -19,8 +19,5 @@ h3 {
 }
 
 .graf {
-  position: relative;
-  width: 150px;
-  left: 100px;
-  margin-left: -75px;
+  margin: 0 auto;
 }
