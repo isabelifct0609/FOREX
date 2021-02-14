@@ -1,7 +1,3 @@
-// IMPORTACIONES
-
-import { ValoresObjeto } from './ValoresObjeto.js';
-
 // FUNCIONES
 
 // busca el valor de apertura (de la propiedad OPEN) del mes (el valor de apertura de la primera posición del array)
@@ -38,25 +34,26 @@ function valorMinMes(array) {
   return res;
 }
 
-// crea los objetos con los valores de cada mes y los convierte en un array y  devuelve un array con los valores del mes
-function obtenerValoresPorMes(array) {
-  let valores = new ValoresObjeto(
-    buscarApertura(array),
-    valorMaxMes(array),
-    valorMinMes(array),
-    buscarCierre(array)
-  )
-  let res = Object.values(valores);
-  return res;
-}
-
-// crea un array con los valores de cada mes
+// crea un array 
 
 function valoresAnuales(array) {
   let res = [];
+  let apertura = [];
+  let max = [];
+  let min = [];
+  let cierre = [];
+
   for (const key in array) {
-    res.push(obtenerValoresPorMes(array[key]));
+    apertura.push(buscarApertura(array[key]));
+    max.push(valorMaxMes(array[key]));
+    min.push(valorMinMes(array[key]));
+    cierre.push(buscarCierre(array[key]));
   }
+  res.push(apertura);
+  res.push(max);
+  res.push(min,);
+  res.push(cierre);
+
   return res;
 }
 

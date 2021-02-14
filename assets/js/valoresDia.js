@@ -1,7 +1,3 @@
-// IMPORTACIONES
-
-import { ValoresObjeto } from './ValoresObjeto.js';
-
 // FUNCIONES
 
 // busca el valor de apertura (de la propiedad OPEN) de cada dia (propiedad DTYYYYMMDD)(el primer valor de apertura de cada dia)
@@ -103,27 +99,29 @@ function buscarMinDia(array) {
   return arr;
 }
 
-// crea los objetos con los valores de cada dia del mes, los convierte en un array y devuelve un array con todos los dias del mes
-function obtenerValoresPorDias(array) {
-  let res = [];
-  let apertura = buscarAperturaDia(array);
-  //console.log('Apertura:',apertura);
-  let max = buscarMaxDia(array);
-  //console.log('max:', max);
-  let min = buscarMinDia(array);
-  //console.log('min:', min);
-  let cierre = buscarCierreDia(array);
-  //console.log('Cierre:',cierre);
-
-  for (let i = 0; i < max.length; i++) {
-    let valores = new ValoresObjeto(
-      apertura[i],
-      max[i],
-      min[i],
-      cierre[i]
-    )
-    res.push(Object.values(valores));
+function diaMes(array) {
+  let day;
+  let arr = [];
+  for (let i = 0; i < array.length; i++) {
+    let date = array[i].DTYYYYMMDD;
+    if (day != date) {
+      day = date;
+      let res = day + '';
+      arr.push(res.substring(6, res.length));
+    }
   }
+  return arr;
+}
+
+// crea un array con cuatro array dentro uno por cada propirad
+function obtenerValoresPorDias(array) {
+  let res;
+  let dia = diaMes(array)
+  let apertura = buscarAperturaDia(array);
+  let max = buscarMaxDia(array);
+  let min = buscarMinDia(array);
+  let cierre = buscarCierreDia(array);
+  res = [dia, apertura, max, min, cierre];
   return res;
 }
 
