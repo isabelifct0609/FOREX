@@ -49,7 +49,11 @@ function valoresAnuales(array) {
     min.push(valorMinMes(array[key]));
     cierre.push(buscarCierre(array[key]));
   }
-  res.push([apertura, max, min, cierre]);
+  res.push(apertura);
+  res.push(max);
+  res.push(min,);
+  res.push(cierre);
+
   return res;
 }
 
