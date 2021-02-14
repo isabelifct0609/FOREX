@@ -73,6 +73,7 @@ let grafica = document.querySelector('#divGrafica');
 // botones meses
 eventoBoton(0);
 eventoBoton(1);
+eventoBoton(2);
 eventoBoton(3);
 eventoBoton(4);
 eventoBoton(5);
