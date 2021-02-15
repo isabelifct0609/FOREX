@@ -14,7 +14,7 @@ import { mes11 } from './assets/datos/AUDUSD-2-2018-MES-11.js';
 import { mes12 } from './assets/datos/AUDUSD-2-2018-MES-12.js';
 import { valoresAnuales } from '../../js/valoresMes.js';
 import { valoresDiariosAnual } from '../../js/valoresDia.js';
-// import { mostrarGrafica } from '../../js/grafica.js';
+import { mostrarGrafica } from '../../js/grafica.js';
 
 
 // FUNCIONES
@@ -41,7 +41,7 @@ function eventoBoton(posicionBoton) {
     grafica.append(addTitulo(posicionBoton));
     let datos = valoresDias[posicionBoton];
     console.log(datos);
-    // grafica.append(mostrarGrafica(datos));
+    grafica.append(mostrarGrafica(datos));
   });
 }
 
