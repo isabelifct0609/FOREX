@@ -94,5 +94,5 @@ botones[12].addEventListener('click', () => {
 
 //boton Otras Monedas});
 botones[13].addEventListener('click', () => {
-  location.href = '../../../../index.html';
+  location.href = '../../../index.html';
 });
