@@ -11,7 +11,7 @@ function mostrarGrafica(datos) {
     console.log('longitud:',datos.length)
     if (datos.length === 4) {
         datos.unshift(['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre']);
-        console.log(datos);
+        // console.log(datos);
     }
     let janChart = new Chart(graf, {
         type: 'line',
@@ -21,7 +21,7 @@ function mostrarGrafica(datos) {
                     label: 'Open',
                     data: datos[1],
                     borderColor: [
-                        'rgba(44, 109, 171, 1)'
+                        'rgba(44, 109, 171, 0.5)'
 
                     ],
                     fill: false,
@@ -46,7 +46,7 @@ function mostrarGrafica(datos) {
                     label: 'Close',
                     data: datos[4],
                     borderColor: [
-                        'rgba(144, 44, 171, 1)'
+                        'rgba(144, 44, 171, 0.5)'
                     ],
                     fill: false,
                 }
