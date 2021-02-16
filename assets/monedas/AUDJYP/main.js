@@ -38,10 +38,11 @@ function addTitulo(m) {
 function eventoBoton(posicionBoton) {
   botones[posicionBoton].addEventListener('click', () => {
     borrarGrafica();
-    grafica.append(addTitulo(posicionBoton));
-    let datos = valoresDias[posicionBoton];
+    grafica.append(addTitulo(posicionBoton - 1));
+    let datos = valoresDias[posicionBoton - 1];
     console.log(datos);
     grafica.append(mostrarGrafica(datos));
+    print.style.display = "flex";
   });
 }
 
@@ -53,6 +54,10 @@ let anual = [mes1, mes2, mes3, mes4, mes5, mes6, mes7, mes8, mes9, mes10, mes11,
 
 // titulos grafica
 let titulosGrafica = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre', 'Anual'];
+
+let divBotones = document.querySelector('#divBotones');
+// console.log(divBotones);
+let print = document.querySelector('#botonPrint');
 
 // array con todos los valores por mes
 let valorAnual = valoresAnuales(anual);
@@ -71,7 +76,7 @@ let grafica = document.querySelector('#divGrafica');
 // EVENTOS
 
 // botones meses
-eventoBoton(0);
+
 eventoBoton(1);
 eventoBoton(2);
 eventoBoton(3);
@@ -83,16 +88,24 @@ eventoBoton(8);
 eventoBoton(9);
 eventoBoton(10);
 eventoBoton(11);
+eventoBoton(12);
 
 // boton Anual
-botones[12].addEventListener('click', () => {
+botones[13].addEventListener('click', () => {
   borrarGrafica();
   grafica.append(addTitulo(12));
   console.log(valorAnual);
   grafica.append(mostrarGrafica(valorAnual));
 });
 
-// boton Otras Monedas
-botones[13].addEventListener('click', () => {
+// boton imprimir
+botones[14].addEventListener('click', () => {
+  divBotones.style.display = "none";
+  document.querySelector('canvas').classList.remove('.col-sm-6');
+  document.querySelector('canvas').classList.add('.col-sm-10');
+});
+
+// boton home
+botones[0].addEventListener('click', () => {
   location.href = '../../../index.html';
 });
