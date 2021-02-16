@@ -101,8 +101,8 @@ botones[13].addEventListener('click', () => {
 // boton imprimir
 botones[14].addEventListener('click', () => {
   divBotones.style.display = "none";
-  document.querySelector('canvas').classList.remove('.col-sm-6');
-  document.querySelector('canvas').classList.add('.col-sm-10');
+  //document.querySelector('canvas').classList.remove('.col-sm-6');
+  //document.querySelector('canvas').classList.add('.col-sm-10');
 });
 
 // boton home
