@@ -90,7 +90,14 @@ botones[12].addEventListener('click', () => {
   grafica.append(mostrarGrafica(valorAnual));
 });
 
-// boton Otras Monedas
-botones[13].addEventListener('click', () => {
+// boton imprimir
+botones[14].addEventListener('click', () => {
+  divBotones.style.display = "none";
+  document.querySelector('canvas').classList.remove('.col-sm-6');
+  document.querySelector('canvas').classList.add('.col-sm-10');
+ });
+  
+ // boton home
+ botones[0].addEventListener('click', () => {
   location.href = '../../../index.html';
-});
+ });
