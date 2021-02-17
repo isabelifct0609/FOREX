@@ -58,6 +58,7 @@ let titulosGrafica = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Ju
 let divBotones = document.querySelector('#divBotones');
 // console.log(divBotones);
 let print = document.querySelector('#botonPrint');
+let volver = document.querySelector('#botonVolver');
 
 // array con todos los valores por mes
 let valorAnual = valoresAnuales(anual);
@@ -101,8 +102,19 @@ botones[13].addEventListener('click', () => {
 // boton imprimir
 botones[14].addEventListener('click', () => {
   divBotones.style.display = "none";
-  //document.querySelector('canvas').classList.remove('.col-sm-6');
-  //document.querySelector('canvas').classList.add('.col-sm-10');
+  let canvas = document.querySelector('canvas');
+  canvas.classList.replace('col-sm-6', 'col-sm-10');
+  volver.style.display = "flex";
+  print.style.display = "none";
+});
+
+// boton volver 
+botones[15].addEventListener('click', () => {
+  divBotones.style.display = "flex";
+  let canvas = document.querySelector('canvas');
+  canvas.classList.replace('col-sm-10', 'col-sm-6');
+  volver.style.display = "none";
+  print.style.display = "flex";
 });
 
 // boton home
