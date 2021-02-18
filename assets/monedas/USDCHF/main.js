@@ -38,10 +38,11 @@ function addTitulo(m) {
 function eventoBoton(posicionBoton) {
   botones[posicionBoton].addEventListener('click', () => {
     borrarGrafica();
-    grafica.append(addTitulo(posicionBoton));
-    let datos = valoresDias[posicionBoton];
+    grafica.append(addTitulo(posicionBoton -1));
+    let datos = valoresDias[posicionBoton -1];
     console.log(datos);
     grafica.append(mostrarGrafica(datos));
+    print.style.display = "flex";
   });
 }
 
@@ -67,6 +68,11 @@ let botones = document.querySelectorAll('button');
 
 let grafica = document.querySelector('#divGrafica');
 // console.log(grafica);
+let divBotones = document.querySelector('#divBotones');
+
+let print = document.querySelector('#botonPrint');
+
+let volver = document.querySelector('#botonVolver');
 
 // EVENTOS
 
@@ -86,14 +92,33 @@ eventoBoton(11);
 
 
 // boton Anual
-botones[12].addEventListener('click', () => {
+botones[13].addEventListener('click', () => {
   borrarGrafica();
   grafica.append(addTitulo(12));
   console.log(valorAnual);
   grafica.append(mostrarGrafica(valorAnual));
 });
 
-// boton Otras Monedas
-botones[13].addEventListener('click', () => {
-  location.href = '../../../../index.html';
-});
+
+botones[14].addEventListener('click', () => {
+  divBotones.style.display = "none";
+  let canvas = document.querySelector('canvas');
+  canvas.classList.replace('col-sm-6', 'col-sm-10');
+  volver.style.display = "flex";
+  print.style.display = "none";
+ });
+  
+ // boton volver
+ botones[15].addEventListener('click', () => {
+  divBotones.style.display = "flex";
+  let canvas = document.querySelector('canvas');
+  canvas.classList.replace('col-sm-10', 'col-sm-6');
+  volver.style.display = "none";
+  print.style.display = "flex";
+ });
+  
+ // boton home
+ botones[0].addEventListener('click', () => {
+  location.href = '../../../index.html';
+ });
+ 
