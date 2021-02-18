@@ -8,9 +8,11 @@ function mostrarGrafica(datos) {
     graf.classList.add('graf');
     graf.getContext('2d');
 
-    console.log('longitud:',datos.length)
+    //console.log('longitud:',datos.length)
+
     if (datos.length === 4) {
         datos.unshift(['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre']);
+        
         // console.log(datos);
     }
     let janChart = new Chart(graf, {
@@ -65,6 +67,4 @@ function mostrarGrafica(datos) {
 
     return graf;
 }
-export {
-    mostrarGrafica
-};
+export { mostrarGrafica };
