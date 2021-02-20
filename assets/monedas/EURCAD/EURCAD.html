@@ -16,8 +16,9 @@
   <div id="contenedor" class="center">
     <h1 class="text-center font-weight-bolder">FOREX</h1>
     <h2 class="text-center font-weight-bolder">EURO / DÓLAR CANADIENSE</h2>
-    <div id="divBotones" class="d-flex flex-column">
+    <div id="divBotones" style="display: flex;" class="flex-column">
       <div id="divBotones1" class="d-flex align-content-around flex-wrap justify-content-center">
+        <button id="home" class="font-weight-bold margin-btn btn btn-success">Home</button>
         <button id="mes1" class="font-weight-bold margin-btn btn btn-info">Enero</button>
         <button id="mes2" class="font-weight-bold margin-btn btn btn-info">Febrero</button>
         <button id="mes3" class="font-weight-bold margin-btn btn btn-info">Marzo</button>
@@ -30,15 +31,19 @@
         <button id="mes10" class="font-weight-bold margin-btn btn btn-info">Octubre</button>
         <button id="mes11" class="font-weight-bold margin-btn btn btn-info">Noviembre</button>
         <button id="mes12" class="font-weight-bold margin-btn btn btn-info">Diciembre</button>
-      </div>
-      <div id="divBotones2" class="d-flex justify-content-center">
         <button id="anual" class="font-weight-bold margin-btn btn btn-primary">Anual</button>
-        <button id="anual" class="font-weight-bold margin-btn btn btn-warning">Otras Monedas</button>
       </div>
     </div>
-    <div id="divGrafica"></div>
+    <div id="divGrafica" class=""></div>
+    <div id="botonPrint" style="display: none;" class="align-content-around flex-wrap justify-content-center">
+      <button id="print" class="font-weight-bold margin-btn btn btn-success">Imprimir</button>
+    </div>
+    <div id="botonVolver" style="display: none;" class="align-content-around flex-wrap justify-content-center">
+      <button id="print" class="font-weight-bold margin-btn btn btn-primary">Volver</button>
+    </div>
+  
   </div>
   <script type="module" src="main.js"></script>
-</body>
-
-</html>
+ </body>
+  
+ </html> 
