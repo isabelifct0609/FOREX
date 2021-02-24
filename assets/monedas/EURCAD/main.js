@@ -100,6 +100,7 @@ botones[13].addEventListener('click', () => {
   grafica.append(mostrarGrafica(valorAnual));
 });
 
+
 // boton imprimir
 botones[14].addEventListener('click', () => {
   divBotones.style.display = "none";
@@ -127,3 +128,9 @@ botones[15].addEventListener('click', () => {
 // botones[13].addEventListener('click', () => {
 //   location.href = '../../../index.html';
 // });
+
+//boton Otras Monedas});
+botones[13].addEventListener('click', () => {
+  location.href = '../../../index.html';
+});
+
