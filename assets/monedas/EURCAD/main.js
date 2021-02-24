@@ -38,12 +38,14 @@ function addTitulo(m) {
 function eventoBoton(posicionBoton) {
   botones[posicionBoton].addEventListener('click', () => {
     borrarGrafica();
-    grafica.append(addTitulo(posicionBoton));
-    let datos = valoresDias[posicionBoton];
+    grafica.append(addTitulo(posicionBoton - 1));
+    let datos = valoresDias[posicionBoton - 1];
     console.log(datos);
     grafica.append(mostrarGrafica(datos));
+    print.style.display = "flex";
   });
-}
+ };
+
 
 
 // VARIABLES
@@ -68,10 +70,14 @@ let botones = document.querySelectorAll('button');
 let grafica = document.querySelector('#divGrafica');
 // console.log(grafica);
 
+let divBotones = document.querySelector('#divBotones');
+let print = document.querySelector('#botonPrint');
+let volver = document.querySelector('#botonVolver');
+
+
 // EVENTOS
 
 // botones meses
-eventoBoton(0);
 eventoBoton(1);
 eventoBoton(2);
 eventoBoton(3);
@@ -83,16 +89,48 @@ eventoBoton(8);
 eventoBoton(9);
 eventoBoton(10);
 eventoBoton(11);
+eventoBoton(12);
+
 
 // boton Anual
-botones[12].addEventListener('click', () => {
+botones[13].addEventListener('click', () => {
   borrarGrafica();
   grafica.append(addTitulo(12));
   console.log(valorAnual);
   grafica.append(mostrarGrafica(valorAnual));
 });
 
+
+// boton imprimir
+botones[14].addEventListener('click', () => {
+  divBotones.style.display = "none";
+  let canvas = document.querySelector('canvas');
+  canvas.classList.replace('col-sm-6', 'col-sm-10');
+  volver.style.display = "flex";
+  print.style.display = "none";
+ });
+ 
+// boton volver
+botones[15].addEventListener('click', () => {
+  divBotones.style.display = "flex";
+  let canvas = document.querySelector('canvas');
+  canvas.classList.replace('col-sm-10', 'col-sm-6');
+  volver.style.display = "none";
+  print.style.display = "flex";
+ });
+  
+ // boton home
+ botones[0].addEventListener('click', () => {
+  location.href = '../../../index.html';
+ });
+ 
+// // boton Otras Monedas});
+// botones[13].addEventListener('click', () => {
+//   location.href = '../../../index.html';
+// });
+
 //boton Otras Monedas});
 botones[13].addEventListener('click', () => {
   location.href = '../../../index.html';
 });
+
