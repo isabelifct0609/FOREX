@@ -37,8 +37,8 @@ function addTitulo(m) {
 function eventoBoton(posicionBoton) {
   botones[posicionBoton].addEventListener('click', () => {
     borrarGrafica();
-    grafica.append(addTitulo(posicionBoton));
-    let datos = valoresDias[posicionBoton];
+    grafica.append(addTitulo(posicionBoton - 1));
+    let datos = valoresDias[posicionBoton - 1];
     console.log(datos);
     grafica.append(mostrarGrafica(datos));
     print.style.display = "flex";
