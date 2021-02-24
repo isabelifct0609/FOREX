@@ -8,10 +8,12 @@ function mostrarGrafica(datos) {
     graf.classList.add('graf');
     graf.getContext('2d');
 
-    console.log('longitud:',datos.length)
+    //console.log('longitud:',datos.length)
+
     if (datos.length === 4) {
         datos.unshift(['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre']);
-        console.log(datos);
+        
+        // console.log(datos);
     }
     let janChart = new Chart(graf, {
         type: 'line',
@@ -21,7 +23,7 @@ function mostrarGrafica(datos) {
                     label: 'Open',
                     data: datos[1],
                     borderColor: [
-                        'rgba(255, 99, 132, 1)'
+                        'rgba(44, 109, 171, 0.5)'
 
                     ],
                     fill: false,
@@ -30,7 +32,7 @@ function mostrarGrafica(datos) {
                     label: 'High',
                     data: datos[2],
                     borderColor: [
-                        'rgba(54, 162, 235, 1)'
+                        'rgba(89, 171, 44, 1)'
                     ],
                     fill: false,
                 },
@@ -38,7 +40,7 @@ function mostrarGrafica(datos) {
                     label: 'Low',
                     data: datos[3],
                     borderColor: [
-                        'rgba(255, 206, 86, 1)'
+                        'rgba(215, 29, 17, 1)'
                     ],
                     fill: false,
                 },
@@ -46,7 +48,7 @@ function mostrarGrafica(datos) {
                     label: 'Close',
                     data: datos[4],
                     borderColor: [
-                        'rgba(75, 192, 192, 1)'
+                        'rgba(144, 44, 171, 0.5)'
                     ],
                     fill: false,
                 }
@@ -65,6 +67,4 @@ function mostrarGrafica(datos) {
 
     return graf;
 }
-export {
-    mostrarGrafica
-};
+export { mostrarGrafica };
