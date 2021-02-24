@@ -120,6 +120,4 @@ botones[15].addEventListener('click', () => {
 // boton home
 botones[0].addEventListener('click', () => {
  location.href = '../../../index.html';
- location.href = '../../../index.html';
-
 });
