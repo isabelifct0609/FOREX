@@ -16,8 +16,18 @@
 <body>
   <div id="contenedor" class="center">
     <h1 class="text-center font-weight-bolder">FOREX</h1>
+    <h2 class="text-center font-weight-bolder"></h2>
     <div id="divBotones" class="d-flex flex-column">
       <div id="divBotones1" class="d-flex align-content-around flex-wrap justify-content-center">
+        <!-- Boton desplegable -->
+        <div class="dropdown">
+          <button class="btn btn-primary dropdown-toggle margin-btn" type="button" id="dropdownMenu2"
+            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">AÑO</button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+            <button class="dropdown-item" type="button">2018</button>
+          </div>
+        </div>
+        <!-- Fin Boton desplegable -->
         <button id="AUDJPY" class="font-weight-bold margin-btn btn btn-info">AUDJPY</button>
         <button id="GBPUSD" class="font-weight-bold margin-btn btn btn-info">GBPUSD</button>
         <button id="EURCAD" class="font-weight-bold margin-btn btn btn-info">EURCAD</button>
@@ -29,7 +39,19 @@
     </div>
 
   </div>
+
+  <footer>© Powered by G7</footer>
+  
   <script src="index.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
 </body>
 
 </html>

@@ -100,6 +100,7 @@ botones[13].addEventListener('click', () => {
 });
 
 
+
 botones[14].addEventListener('click', () => {
   divBotones.style.display = "none";
   let canvas = document.querySelector('canvas');
@@ -122,3 +123,4 @@ botones[14].addEventListener('click', () => {
   location.href = '../../../index.html';
  });
  
+
