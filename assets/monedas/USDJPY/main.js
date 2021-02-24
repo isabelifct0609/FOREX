@@ -92,6 +92,7 @@ eventoBoton(12);
  
 // boton Anual
 botones[13].addEventListener('click', () => {
+
  borrarGrafica();
  grafica.append(addTitulo(12));
  console.log(valorAnual);
@@ -119,4 +120,6 @@ botones[15].addEventListener('click', () => {
 // boton home
 botones[0].addEventListener('click', () => {
  location.href = '../../../index.html';
+ location.href = '../../../index.html';
+
 });
