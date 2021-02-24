@@ -77,7 +77,6 @@ let volver = document.querySelector('#botonVolver');
 // EVENTOS
 
 // botones meses
-eventoBoton(0);
 eventoBoton(1);
 eventoBoton(2);
 eventoBoton(3);
@@ -89,6 +88,7 @@ eventoBoton(8);
 eventoBoton(9);
 eventoBoton(10);
 eventoBoton(11);
+eventoBoton(12);
 
 
 // boton Anual
