@@ -12,7 +12,6 @@ h2 {
   color: teal;
 }
 
-
 h3 {
   margin: 2rem;
   color: purple;
@@ -20,4 +19,8 @@ h3 {
 
 .graf {
   margin: 0 auto;
+}
+
+button#print.margin-btn {
+  margin-top: 2rem;
 }
