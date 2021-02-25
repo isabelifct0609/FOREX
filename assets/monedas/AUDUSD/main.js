@@ -105,13 +105,19 @@ botones[15].addEventListener('click', () => {
   volver.style.display = "none";
   print.style.display = "flex";
  });
+
+
+ // boton imprimir
+botones[14].addEventListener('click', () => {
+  divBotones.style.display = "none";
+  let canvas = document.querySelector('canvas');
+  canvas.classList.replace('col-sm-6', 'col-sm-10');
+  volver.style.display = "flex";
+  print.style.display = "none";
+ });
+ 
   
  // boton home
  botones[0].addEventListener('click', () => {
   location.href = '../../../index.html';
  });
- 
-// boton Otras Monedas
-botones[13].addEventListener('click', () => {
-  location.href = '../../../index.html';
-});
